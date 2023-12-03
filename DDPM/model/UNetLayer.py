@@ -3,6 +3,7 @@ from torch import nn
 from torch.nn import functional as F
 
 from einops import reduce, rearrange
+from numpy import einsum
 
 from functools import partial
 import math
@@ -99,6 +100,7 @@ class ResnetBlock(nn.Module):
         return h + self.res_conv(x)
 
 if __name__ == '__main__':
-    b =torch.randn((3,3,100,100))
-    a = WeightStandardizedConv2d(3,5,kernel_size=3)
-    a(b)
+    b =torch.randn((3,8,100,100))
+    a = torch. randn((3,8,100,50))
+    c = einsum("b h d i, b h d j -> b h i j", a, b)
+    print(c.shape)
