@@ -157,7 +157,7 @@ class PreNorm(nn.Module):
         self.norm = nn.GroupNorm(1, dim)
 
     def forward(self, x):
-        x = self.nrom(x)
+        x = self.norm(x)
         return self.fn(x)
 
 if __name__ == '__main__':
