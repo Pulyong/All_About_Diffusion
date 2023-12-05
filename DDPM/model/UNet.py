@@ -1,6 +1,7 @@
 import torch
 from torch import nn
 from torch.nn import functional as F
+from functools import partial
 
 from NetHelper import *
 from UNetLayer import *
@@ -22,5 +23,21 @@ class UNet(nn.Module):
 
         block_klass = partial(ResnetBlock, groups=resnet_block_groups)
 
+        time_dim = dim * 4
+
+        self.time_mlp = nn.Sequential(
+            PositionalEmbedding(dim),
+            nn.Linear(dim, time_dim),
+            nn.GELU(),
+            nn.Linear(time_dim,time_dim)
+        )
+
+
+        # layers
+        self.downs = nn.ModuleList([])
+        self.ups = nn.ModuleList([])
+        num_resolutions = len(in_out)
+
+        
 if __name__ == '__main__':
     pass
