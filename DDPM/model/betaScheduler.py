@@ -26,3 +26,6 @@ def sigmoid_beta_schedule(timesteps):
     beta_end = 0.02
     betas = torch.linspace(-6,6,timesteps)
     return torch.sigmoid(betas) * (beta_end - beta_start) + beta_start
+
+if __name__ == '__main__':
+    pass

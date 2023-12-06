@@ -120,6 +120,6 @@ class UNet(nn.Module):
         x = self.final_res_block(x, t)
         return self.final_conv(x)
 
-        
+    
 if __name__ == '__main__':
     pass
