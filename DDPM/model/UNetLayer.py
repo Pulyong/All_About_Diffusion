@@ -165,3 +165,4 @@ if __name__ == '__main__':
     a = torch. randn((3,8,100,50))
     c = einsum("b h d i, b h d j -> b h i j", a, b)
     print(c.shape)
+    pass
