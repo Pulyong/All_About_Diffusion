@@ -1,0 +1,9 @@
+project_name : 'DDPM'
+entity: 'rladyd020'
+group_name: 'test'
+exp_name: 'test'
+device: 'cuda:0'
+seed: 0
+
+defaults:
+- _self_
