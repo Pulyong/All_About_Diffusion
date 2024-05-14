@@ -1,0 +1,11 @@
+trainer:
+  optimizer:
+    lr: 0.0000000005
+    weight_decay: 0
+
+defaults:
+- base
+- dataset: imagenet1k
+- model: ddpm
+- trainer: base
+- _self_
