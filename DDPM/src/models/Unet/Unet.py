@@ -10,7 +10,7 @@ import torch
 from torch import nn, einsum
 import torch.nn.functional as F
 
-from UnetLayer import *
+from .UnetLayer import *
 
 class Unet(nn.Module):
     def __init__(

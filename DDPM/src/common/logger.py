@@ -10,7 +10,7 @@ class WandbTrainerLogger(object):
         dict_cfg = OmegaConf.to_container(cfg, resolve=True, throw_on_missing=True)
         
         wandb.init(project = self.cfg.project_name,
-                   entitiy=self.cfg.entity,
+                   entity=self.cfg.entity,
                    config=dict_cfg,
                    group=self.cfg.group_name)
         

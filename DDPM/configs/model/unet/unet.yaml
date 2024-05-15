@@ -1,4 +1,4 @@
 dim: 128
-dim_mults: (1, 1, 2, 2, 4, 4)
+dim_mults: ${eval:'(1, 1, 2, 2, 4, 4)'}
 channels: 3
 resnet_block_groups: 8

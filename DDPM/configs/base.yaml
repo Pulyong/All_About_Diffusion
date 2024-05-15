@@ -1,7 +1,7 @@
 project_name : 'DDPM'
 entity: 'rladyd020'
-group_name: 'test'
-exp_name: 'test'
+group_name: 'train'
+exp_name: 'train1'
 device: 'cuda:0'
 seed: 0
 

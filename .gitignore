@@ -84,3 +84,7 @@ ipython_config.py
 
 **/__pycache__/**
 **/.ipynb_checkpoints/**
+
+wandb/
+nohup.out
+model_dump/

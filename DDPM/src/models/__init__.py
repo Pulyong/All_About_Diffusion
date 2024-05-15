@@ -1,5 +1,5 @@
-from Unet import *
-from Diffusion import *
+from .Unet import *
+from .Diffusion import *
 from omegaconf import OmegaConf
 
 def build_diffusion_unet(cfg):

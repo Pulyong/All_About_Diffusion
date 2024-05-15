@@ -27,7 +27,7 @@ def sigmoid_beta_schedule(timesteps):
     betas = torch.linspace(-6, 6, timesteps)
     return torch.sigmoid(betas) * (beta_end - beta_start) + beta_start
 
-def beta_schedule(schedule, timesteps):
+def beta_scheduler(schedule, timesteps):
     if schedule == 'linear':
         betas = linear_beta_schedule(timesteps)
     elif schedule == 'quadratic':

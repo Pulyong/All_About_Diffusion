@@ -5,7 +5,7 @@ import torch
 import torch.nn.functional as F
 from tqdm import tqdm
 
-from diffusion_utils import *
+from .diffusion_utils import *
 
 class GaussianDiffusion():
     def __init__(
@@ -14,8 +14,8 @@ class GaussianDiffusion():
         beta_schedule,
         timesteps
     ):
-        self.betas = beta_schedule(beta_schedule, timesteps)
-        self.timesteps = timesteps
+        self.timesteps = int(timesteps)
+        self.betas = beta_scheduler(beta_schedule, self.timesteps)
         
         # define alphas
         self.alphas = 1.0 - self.betas
